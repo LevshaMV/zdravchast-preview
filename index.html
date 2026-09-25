@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073a40"><meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Здравчасть — каталог запасных частей для МРТ и КТ. Поставка для организаций и ИП.">
+  <title>Здравчасть — запасные части для МРТ и КТ</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+  <script defer src="model.js"></script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Здравчасть — главная"><img src="assets/logo.jpg" alt=""><span>ЗДРАВЧАСТЬ<small>Запчасти для МРТ и КТ</small></span></a>
+    <nav class="nav" aria-label="Основная навигация"><a href="#catalog">Каталог</a><a href="#experience">О компании</a><a href="#interactive">3D-модель</a><a href="#contacts">Контакты</a></nav>
+    <a class="header-cta" href="#contacts">Связаться <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow light"><span class="eyebrow-dot"></span> ПРОФЕССИОНАЛЬНЫЙ B2B-КАТАЛОГ</div>
+        <h1>Детали, от которых зависит <em>точность</em></h1>
+        <p>Запасные части для МРТ и КТ. Помогаем подобрать позицию по артикулу, уточнить совместимость и согласовать поставку для вашей организации.</p>
+        <div class="hero-actions"><a class="button button-light" href="#catalog">Смотреть каталог <span>↗</span></a><a class="text-link light-link" href="#interactive">Исследовать 3D-модель <span>↗</span></a></div>
+        <div class="hero-foot"><span>Для организаций и ИП</span><span>Индивидуальное предложение</span></div>
+      </div>
+      <div class="hero-photo"><img src="assets/ct-scanner.jpg" alt="Компьютерный томограф в диагностическом кабинете"><div class="hero-photo-caption"><span class="caption-line"></span><span>Технологии диагностики<br><b>в деталях</b></span></div></div>
+      <div class="hero-index">01 / ЗДРАВЧАСТЬ</div>
+    </section>
+
+    <section class="intro-strip section-shell" aria-label="Направления работы">
+      <div><span class="intro-n">01</span><strong>МРТ и КТ</strong><p>Специализация на диагностическом оборудовании</p></div>
+      <div><span class="intro-n">02</span><strong>Поиск по позиции</strong><p>Артикул и применимость проверяем отдельно</p></div>
+      <div><span class="intro-n">03</span><strong>Поставка для бизнеса</strong><p>Работаем с организациями и ИП, кроме бюджетных</p></div>
+    </section>
+
+    <section class="interactive-section" id="interactive">
+      <div class="section-shell">
+        <div class="section-heading"><div><div class="eyebrow light">ИНТЕРАКТИВНЫЙ РАЗДЕЛ</div><h2>Исследуйте МРТ изнутри</h2><p>Поверните схематичную 3D-модель и разберите четыре узла. При открытии появятся связанные детали и инструменты.</p></div><span class="model-badge">3D / ИНТЕРАКТИВ</span></div>
+        <div class="model-shell">
+          <div class="model-view"><canvas id="scanner-3d" aria-label="Интерактивная схематичная трёхмерная модель МРТ-системы"></canvas><div class="model-hint">↔ Перетащите для вращения</div><div class="model-watermark">ЗДРАВЧАСТЬ / MR SYSTEM</div><div class="model-popup" id="model-popup" hidden><button type="button" class="model-popup-close" id="model-popup-close" aria-label="Закрыть карточку узла">×</button><div class="eyebrow" id="model-popup-kicker">УЗЕЛ СИСТЕМЫ</div><h4 id="model-popup-title"></h4><div id="model-popup-content"></div></div></div>
+          <div class="model-controls"><div class="model-progress"><span>ПРОГРЕСС ИССЛЕДОВАНИЯ</span><b id="progress-count">0 / 4</b><div class="progress-track"><i id="progress-fill"></i></div></div><h3>Разберите систему</h3><p>Нажмите на узел. Модель раздвинет элементы, а окно покажет позиции каталога.</p><div class="step-list" id="model-steps"></div><div class="model-status" id="model-status" role="status">Начните с любого узла.</div><button class="reset-button" id="model-reset" type="button">↺ Собрать заново</button></div>
+        </div>
+        <div class="model-disclaimer">Схематичная визуализация для знакомства с ассортиментом. Она не показывает устройство конкретной модели томографа и не является инструкцией по обслуживанию.</div>
+      </div>
+    </section>
+
+    <section class="catalog-section section-shell" id="catalog">
+      <div class="section-heading"><div><div class="eyebrow">ОБОРУДОВАНИЕ И КОМПОНЕНТЫ</div><h2>Каталог деталей</h2><p>Первые позиции электронного каталога. Характеристики и применимость конкретного изделия уточняются по маркировке и документам.</p></div><a class="round-link" href="catalog.html" aria-label="Открыть весь каталог">↗</a></div>
+      <div class="product-grid" id="home-products"></div>
+      <div class="catalog-bottom"><span>Нужной позиции нет в каталоге?</span><a href="#contacts">Обсудить подбор по артикулу ↗</a></div>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <div class="section-shell experience-grid">
+        <div class="experience-copy"><div class="eyebrow light">О КОМПАНИИ</div><h2>Опыт, который помогает находить решения</h2><p class="experience-lead">За многолетнюю работу мы выстроили взаимодействие с сетью производственных партнёров. Это помогает искать специализированные компоненты и обсуждать поставку под конкретную задачу.</p><div class="experience-facts"><div><b>Профиль</b><span>Комплектующие для систем МРТ и КТ</span></div><div><b>Подход</b><span>Проверка артикула и технических данных</span></div><div><b>Формат</b><span>Индивидуальные условия для B2B</span></div></div></div>
+        <div class="experience-gallery"><figure class="gallery-large"><img src="assets/factory-interior.jpg" alt="Посещение производственной площадки, фото предоставлено компанией"><figcaption>Производственная площадка · фото компании</figcaption></figure><figure class="gallery-small"><img src="assets/meeting.jpg" alt="Рабочая встреча с представителями партнёров"><figcaption>Встреча с партнёрами · фото компании</figcaption></figure><figure class="gallery-small"><img src="assets/clinical-visit.jpg" alt="Посещение медицинского учреждения, фото предоставлено компанией"><figcaption>Знакомство с оборудованием · фото компании</figcaption></figure></div>
+      </div>
+    </section>
+
+    <section class="manufacturing-section section-shell">
+      <div class="manufacturing-photos"><figure><img src="assets/factory-interior.jpg" alt="Общий вид производственной площадки, фото компании"><figcaption>Производственная площадка · фото компании</figcaption></figure><figure><img src="assets/mri-scanner.jpg" alt="МРТ-аппарат в кабинете диагностики"><figcaption>МРТ-аппарат · иллюстративное фото</figcaption></figure></div>
+      <div class="manufacturing-copy"><div class="eyebrow">ПРОИЗВОДСТВЕННАЯ ГЕОГРАФИЯ</div><h2>От производства до кабинета диагностики</h2><p>Показываем контекст, в котором используются специализированные компоненты. Снимки общего вида иллюстрируют отрасль и не подтверждают связь с конкретным поставщиком или моделью оборудования.</p><a class="text-link" href="#contacts">Обсудить ваш запрос <span>↗</span></a></div>
+    </section>
+
+
+
+    <section class="supply-section section-shell"><div class="section-heading"><div><div class="eyebrow">КАК МЫ РАБОТАЕМ</div><h2>От артикула до поставки</h2></div></div><div class="supply-grid"><article><b>01</b><h3>Вы присылаете позицию</h3><p>Укажите артикул и модель оборудования в письме или при звонке.</p></article><article><b>02</b><h3>Мы проверяем данные</h3><p>Уточняем исполнение, применимость и документы для предложения.</p></article><article><b>03</b><h3>Согласуем условия</h3><p>Стоимость, срок и гарантия фиксируются индивидуально вне сайта.</p></article></div></section>
+
+    <section class="contact-section" id="contacts"><div class="section-shell contact-grid"><div><div class="eyebrow light">КОНТАКТЫ</div><h2>Есть артикул или техническая задача?</h2><p>Свяжитесь с нами, чтобы обсудить нужную позицию и условия поставки.</p></div><div class="contact-card"><span>КОНТАКТНЫЕ ДАННЫЕ</span><strong>Будут указаны после утверждения реквизитов компании</strong><p>Телефон, рабочая почта и юридические сведения пока не предоставлены для макета.</p></div></div></section>
+  </main>
+  <footer class="footer"><div class="section-shell footer-grid"><a class="brand footer-brand" href="index.html"><img src="assets/logo.jpg" alt=""><span>ЗДРАВЧАСТЬ<small>Запасные части для МРТ и КТ</small></span></a><div><a href="catalog.html">Каталог</a><a href="#experience">О компании</a><a href="#interactive">3D-модель</a></div><div><a href="#contacts">Контакты</a><span>Для организаций и ИП, кроме бюджетных организаций</span></div></div></footer>
+</body>
+</html>
+
+
